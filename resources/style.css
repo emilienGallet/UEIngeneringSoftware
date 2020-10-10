@@ -1,0 +1,200 @@
+/*
+ * Fichier ; style.css
+ */
+
+*{
+    color: #fde0e0;
+}
+html{
+    //height : 100%;
+}
+
+body{
+    margin : 0 ;
+    //height : 100%;
+}
+
+body > h1,h3,footer{
+    position : relative;
+    z-index : 1;
+}
+
+.red{
+    color:#ffb300;
+}
+
+.bleu{
+    color:blue;
+}
+
+h1, h3 {
+    text-align: center;
+    font-style: oblique;
+    font-size: 32px;
+    margin-top: -8px;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    padding-top: 29px;
+    background-color: #bf4d08;
+    color: antiquewhite;
+    font-family: "DejaVu Serif Bold",sans-serif;
+}
+
+h3 {
+    font-size: 15px;
+    padding-bottom: 29px;
+    padding-top: 3px;
+}
+
+/* 
+ * A MODIFIER 
+ */
+@media all and (max-width: /*32.5*/69em){
+    #nav1{
+	display : none;
+    }
+    #nav2{
+	//float: left;
+	//width: 20%;
+	//height: 100%;
+	//position: fixed;
+	//z-index : 0;
+	//padding-top: 220px;
+
+    }
+    section{
+	margin-left : 0%;
+	z-index : -2;
+    }
+
+}/* FIN A MODIFIER */
+/*
+@media all and (min-width: 32.5em) and (max-width: 40em){
+    #nav2{
+	display : none;
+    }
+    #nav1{
+	float: left;
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	z-index : 0;
+	padding-top: 220px;
+	background-color:#e8600f;
+
+    }
+    section{
+	margin-left : 20%;
+	background-color: #fd5e00;
+	z-index : -2;
+    }
+
+}*/
+@media all and (min-width: /*40*/69em){
+    #nav2{
+	display : none;
+    }
+    #nav1{
+	float: left;
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	z-index : 0;
+	padding-top: 120px;
+
+    }
+    section{
+	margin-left : 20%;
+	z-index : -2;
+    }
+
+}
+nav ul{
+    padding : 0px;
+    margin : 0px;
+}
+
+section ul{
+    padding : 16px;
+    margin : 0px;
+}
+
+nav li{
+    
+    list-style-type: none;
+    text-align: center;
+    font-family: "DejaVu Serif Bold",sans-serif ;
+    padding : 12px;
+
+}
+nav a:focus,nav a:hover{
+    color:#000;
+}
+
+nav{
+	background-color: #bd7f00;
+}
+
+#nav1{
+	background-color:#44220e;
+}
+    section{
+	background-color: #44220e;
+}
+
+section:nth-child(2n){
+    background-color: #573b06;
+}
+
+section p{
+    margin : 0px;
+    padding : 6px;
+}
+
+section a:focus,section a:hover{
+    color:#000;
+}
+
+section  h1{
+    margin:0px;
+    background-color : inherit;
+}
+li:last-child b{
+    color :  #000;
+}
+
+form{
+    margin : 0px;
+}
+
+input{
+ color : #000;
+}
+
+select,option{
+    color : #000;
+}
+select,input{
+    display : block;
+}
+
+footer{
+    background-color : #bf4d08;
+    color : antiquewhite;
+    //margin-left: -8px;
+    //margin-right: -8px;
+    text-align: center;
+    //padding : 3%;
+    //margin-bottom: -8px;
+    padding-bottom: 29px;
+    padding-top: 29px;
+}
+footer a:visited{
+    color : #a4eeff;
+}
+footer a:link{
+    color : #00ffcf;
+}
+footer a:focus,footer a:hover{
+    color : #fff;
+}
