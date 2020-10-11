@@ -12,7 +12,7 @@
   <h1>Serene Mouv</h1>
   <h2>Document de spécification des exigences</h2>
   <h3>
-    version : <em>0.1</em>
+    version : <em contenteditable="true">0.1.1</em>
   </h3>
   <table>
     <thead>
@@ -27,10 +27,23 @@
     </thead>
     <tbody contenteditable="true">
       <tr>
-        <td>Émilien<br></td>
-        <td>0.1<br></td>
-        <td>11/10/20<br></td>
-        <td>Mise en place du format, rajout dans Environnement<br></td>
+        <td>Émilien</td>
+        <td>0.1.0</td>
+        <td>11/10/20</td>
+        <td>Mise en place du format de base, rajout dans
+          Environnement</td>
+      </tr>
+      <tr>
+        <td>Christian<br></td>
+        <td>0.1.1</td>
+        <td>11/10/20</td>
+        <td>Rajout de l'introduction</td>
+      </tr>
+      <tr>
+        <td>Thomas<br></td>
+        <td>0.1.1<br></td>
+        <td>11/10/20</td>
+        <td>Rajout des caractéristiques utilisateurs<br></td>
       </tr>
       <tr>
         <td><br></td>
@@ -45,9 +58,115 @@
   <ul>
     <li><a href="#Introduction">Introduction</a></li>
   </ul>
-  <h3>Modifier titre</h3>
   <ol>
-    <li class="num">Introduction</li>
+    <li class="num">Introduction
+      <ol>
+        <li>Objet
+          <p>Notre Document "Spécification des exigences " a pour
+            objectif de décrire l'environnement , les fonctions et les
+            contraintes, la caractéristiques des utilisateurs finaux
+            ainsi que les exigences fonctionnelles et non
+            fonctionnelles, du Ze-Moov. Ce document sera un complément
+            aux autres documents (« Conception générale », « Cahier des
+            tests de recette », « Cahier des tests d’intégration » et «
+            Manuel d’utilisation ») représentant les piliers du logiciel
+            « Ze-Moov ». Ce dernier est écrit tout en respectant la
+            norme IEEE 830-1998.</p>
+        </li>
+        <li>Portée
+          <p>Le Logiciel "Ze-Moov" permettra aux utilisateurs d'une
+            voiture électrique:</p>
+          <ul>
+            <li>d'atteindre une destination sans la moindre
+              inquiétude du trajet restant</li>
+            <li>de connaître la consommation prévisionnelle du
+              parcours restant</li>
+            <li>de capturer de la température extérieure courante
+              et prévisionnelle</li>
+            <li>de collecter les données pour le trajet.</li>
+          </ul>
+          <p>Tout ceci est calculé en temps réel en fonction de la
+            capacité restante de la batterie. Ce document est destiné
+            principalement aux développeurs du logiciel mais aussi à
+            toute autre personne voulant découvrir en détail le
+            fonctionnement du logiciel.</p>
+        </li>
+        <li>Glossaire
+          <p>Ce tableau ci-dessous explique les différents mots
+            scientifiques pour une meilleure compréhension</p>
+          <table>
+            <tbody>
+              <tr>
+                <td>API (Application Programming Interface)</td>
+                <td>ensemble des classes, de méthodes, des
+                  fonctions et de constantes qui sert de façade par
+                  laquelle le logiciel offre des services à d'autres
+                  logiciels.</td>
+              </tr>
+              <tr>
+                <td>GraphHooper</td>
+                <td>est une API de routage via HTTP.</td>
+              </tr>
+              <tr>
+                <td>HTTP</td>
+                <td>HyperText Transfer Protocol, Protocole de
+                  communication client-serveur développé par Word Wide
+                  Web</td>
+              </tr>
+              <tr>
+                <td>SQL</td>
+                <td>Langage informatique normalisé servant à
+                  exploiter des bases de données relationnelles.</td>
+              </tr>
+              <tr>
+                <td>Java</td>
+                <td>Langage informatique très populaire, doté d’un
+                  écosystème très complet et important.</td>
+              </tr>
+              <tr>
+                <td>Git</td>
+                <td>Logiciel de gestion de versions décentralisé.</td>
+              </tr>
+              <tr>
+                <td>Google Drive</td>
+                <td>Service de stockage et de partage de fichiers
+                  dans le Cloud lancé par la société Google.</td>
+              </tr>
+              <tr>
+                <td>Star UML</td>
+                <td>Logiciel de modélisation UML sous une licence
+                  modifiée de GNU GP, Il gère la plupart des diagrammes
+                  spécifiés dans la norme UML 2.0.</td>
+              </tr>
+              <tr>
+                <td>Mo</td>
+                <td>Mégaoctet, unité de mesure de quantité
+                  d’information numérique, valant 1 048 576 octets.</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>Références
+          <p>[Brève Présentation de la norme IEEE 830] Institut
+            Trempet -
+            http://www.trempet.it/Enseignement/Cours/inf5151/Hiver2008/NotesdeCours/PP-IEEE%20830-%201998.pdf
+
+            ESI Digital Corp. [Exemple d’une spécification d’exigences
+            logicielles] École Polytechnique Montréal [Génie Logiciel –
+            Ingénierie des besoins] Faculté des Sciences et Techniques –
+            François Jacquenet</p>
+        </li>
+        <li>Vue d'ensemble
+          <p>Ce document présentera, en début, une description
+            générale des différentes interfaces, fonctions,
+            caractéristique des utilisateurs, contraintes et hypothèses
+            du logiciel « Ze-Moov ». Ensuite, il s’occupera de bien
+            détailler les exigences fonctionnelles et non fonctionnelles
+            ainsi que tout autre type d’exigence liée au bon
+            fonctionnement du système.</p>
+        </li>
+      </ol>
+    </li>
     <li class="num">Description générale
       <ol>
         <li class="num">Environnement
@@ -108,18 +227,50 @@
                       par reconnaissance d'image.
                       <ol class="scénario">
                         <li class="scénario">Reconnaissance d'image
-                          par une caméra externe relier à notre système.<br>
+                          par une caméra externe relier à notre système.
                         </li>
                         <li class="scénario">Reconnaissance d'image
                           par la caméra du téléphone qui continent notre
-                          système.<br>
-                        </li>
+                          système.</li>
                       </ol>
                     </li>
                   </ol>
                 </li>
 
               </ol>
+            </li>
+          </ol>
+        </li>
+        <li class="num">Caractéristiques des utilisateurs
+          <ol>
+            <li class="num">Niveau d’instruction
+              <p>Le permis de conduire pouvant s’obtenir à 16 ans
+                cela signifie donc que nos utilisateurs seront situés
+                dans une tranche d’âge entre 16 et 80 ans. La totalité
+                des utilisateurs aura au moins le brevet des collèges et
+                qu’une grande majorité aura un BAC ou un diplôme
+                équivalent, professionnel ou non.</p>
+            </li>
+            <li class="num">Expérience
+              <p>L’utilisateur type est supposé déjà conduire une
+                voiture électrique. Cela conduit au fait qu’il a déjà
+                l’expérience de ce type de conduite. De plus une
+                majorité de personnes utilise déjà des interfaces
+                tactiles interactives via les téléphones portables
+                modernes ou les diverses technologies implémentant cette
+                fonction.</p>
+            </li>
+            <li class="num">Connaissances techniques
+              <p>Les utilisateurs auront certainement la
+                connaissance du fonctionnement d’un moteur à essence,
+                car la théorie en est dispensée lors de l’apprentissage
+                de la conduite dans les centres d’examens. Ils n’auront
+                donc pour la plupart aucunes notions du fonctionnement
+                mécanique d’un moteur électrique.</p>
+              <p>On supposera également que l’utilisateur possèdes
+                les connaissances techniques lui permettant d’utiliser
+                les commandes de conduite tel que le volant ou les
+                différentes pédales de vitesse.</p>
             </li>
           </ol>
         </li>
@@ -145,7 +296,7 @@
       motorisation électrique.</li>
     <li id="sysEmbarquer">Système embarqué : ordinateur intégré au
       tableau de bord d’un véhicule.</li>
-    <li><br></li>
+    <li></li>
   </ul>
 
   <!-- <form action="">
@@ -160,6 +311,10 @@
 
 
   <style type="text/css"></style>
+
+
+
+
 
 
 </body>

@@ -46,7 +46,8 @@ li {
 }
 
 ol {
-	counter-reset: item
+	counter-reset: item;
+	padding-left: 0.7%;
 }
 
 ol.scénario {
@@ -73,4 +74,12 @@ h2+h3 {
 
 #logo {
 	float: left;
+}
+
+ul, ol {
+	font-size: 10px;
+}
+
+table:not(:nth-child(5)) {
+	font-size: 10px;
 }
