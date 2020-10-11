@@ -1,0 +1,76 @@
+/*
+ * Fichier ; style.css
+ */
+* {
+	background-color: #fff;
+}
+
+body {
+	margin: 0;
+}
+
+@media print {
+	.pagebreak {
+		page-break-before: always;
+	}
+	.noPrint, .noPrint * {
+		display: none !important;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #000;
+	margin: 5px;
+	border-width: 5px;
+	margin: auto;
+}
+
+tr {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+}
+
+td {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+}
+
+li {
+	list-style-type: decimal;
+	display: block;
+}
+
+ol {
+	counter-reset: item
+}
+
+ol.scénario {
+	counter-reset: sitem
+}
+
+li.num:before {
+	content: counters(item, ".") " : ";
+	counter-increment: item
+}
+
+li.scénario:before {
+	content: 'Scénario-' counters(sitem, ".") " : ";
+	counter-increment: sitem
+}
+
+h1, h2 {
+	text-align: right;
+}
+
+h2+h3 {
+	text-align: right;
+}
+
+#logo {
+	float: left;
+}
