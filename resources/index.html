@@ -1,10 +1,10 @@
-<!-- Fichier : index.html-->
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8" lang="fr">
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="index_fichiers/style.css">
+<title>Serene Mouv - Document de spécification des exigences</title>
 </head>
 <body>
   <img id="logo" alt="Logo de ZE-Moov"
@@ -12,7 +12,7 @@
   <h1>Serene Mouv</h1>
   <h2>Document de spécification des exigences</h2>
   <h3>
-    version : <em contenteditable="true">0.1.1</em>
+    version : <em contenteditable="true">0.1.3</em>
   </h3>
   <table>
     <thead>
@@ -21,8 +21,6 @@
         <td>Version</td>
         <td>Date</td>
         <td>Description</td>
-      </tr>
-      <tr>
       </tr>
     </thead>
     <tbody contenteditable="true">
@@ -41,9 +39,15 @@
       </tr>
       <tr>
         <td>Thomas<br></td>
-        <td>0.1.1<br></td>
+        <td>0.1.2<br></td>
         <td>11/10/20</td>
         <td>Rajout des caractéristiques utilisateurs<br></td>
+      </tr>
+      <tr>
+        <td>Émilien</td>
+        <td>0.1.3</td>
+        <td>13/10/20</td>
+        <td>Rajout du contexte générale et du contexte d'intégration</td>
       </tr>
       <tr>
         <td><br></td>
@@ -55,13 +59,11 @@
     <tfoot></tfoot>
   </table>
   <h3>Table des matières</h3>
-  <ul>
-    <li><a href="#Introduction">Introduction</a></li>
-  </ul>
+  <div id="TableMatiere"></div>
   <ol>
     <li class="num">Introduction
       <ol>
-        <li>Objet
+        <li class="num">Objet
           <p>Notre Document "Spécification des exigences " a pour
             objectif de décrire l'environnement , les fonctions et les
             contraintes, la caractéristiques des utilisateurs finaux
@@ -73,7 +75,7 @@
             « Ze-Moov ». Ce dernier est écrit tout en respectant la
             norme IEEE 830-1998.</p>
         </li>
-        <li>Portée
+        <li class="num">Portée
           <p>Le Logiciel "Ze-Moov" permettra aux utilisateurs d'une
             voiture électrique:</p>
           <ul>
@@ -91,7 +93,7 @@
             toute autre personne voulant découvrir en détail le
             fonctionnement du logiciel.</p>
         </li>
-        <li>Glossaire
+        <li class="num">Glossaire
           <p>Ce tableau ci-dessous explique les différents mots
             scientifiques pour une meilleure compréhension</p>
           <table>
@@ -146,7 +148,7 @@
             </tbody>
           </table>
         </li>
-        <li>Références
+        <li class="num">Références
           <p>[Brève Présentation de la norme IEEE 830] Institut
             Trempet -
             http://www.trempet.it/Enseignement/Cours/inf5151/Hiver2008/NotesdeCours/PP-IEEE%20830-%201998.pdf
@@ -156,7 +158,7 @@
             Ingénierie des besoins] Faculté des Sciences et Techniques –
             François Jacquenet</p>
         </li>
-        <li>Vue d'ensemble
+        <li class="num">Vue d'ensemble
           <p>Ce document présentera, en début, une description
             générale des différentes interfaces, fonctions,
             caractéristique des utilisateurs, contraintes et hypothèses
@@ -171,6 +173,47 @@
       <ol>
         <li class="num">Environnement
           <ol>
+            <li class="num">Contexte générale
+              <p>
+                Dans un contexte ou le marché d'un <a href="#VE"
+                  contenteditable="false">véhicule électrique</a> est
+                propice à un dévellopement. Des rétissence dans l'achat
+                peuvent apparaitre au sujet de l'autonomie de la voiture
+                électrique.
+              </p>
+              <p>
+                À ce jour, il n'existe aucun produit à notre
+                connaissance permetant de savoir si la destination est
+                accesible au cours et en prévision de la conduite <strong>et</strong>
+                qui prend en compte des conditions climatique
+                prévisionelle <strong>et</strong> du dénivelé tout du
+                long du trajet selon la voiture que l'on conduit et
+                comment on conduit celle-ci.
+              </p>
+              <p>Il existe d'autres produits qui effectuent quelques
+                élements mentionner ci-dessus.</p>
+              <ul>
+                <li>Chargemap : Propose le meilleur trajet possible
+                  d'un lieu de départ jusqu'a l'arrivé, indique
+                  également le dénivelé. Montre également les points de
+                  recharges pour les voiture électriques</li>
+                <li>Application d'intinéraire du système embarqué
+                  de la Renault Zoe: Indique le trajet (Pas toujour le
+                  meilleur) et informe le conducteur si la destination
+                  est accessible selon ces critères. Ces critères
+                  n'inclut pas le dénivelé durant le trajet.</li>
+                <li>Plannificateur de trajet renault sur smartphone
+                  : Necessite d'avoir un contrat actif <q>My ZE
+                    Connect</q>
+                </li>
+              </ul>
+            </li>
+            <li class="num">Contexte d'intégration
+              <p>Afin de réaliser notre système, plusieurs choix
+                s'offre en nous en fonction du budget et du temps qui
+                sera allouer a notre projet. Pour cela nous avons
+                élaborer divers sénario ci dessous</p>
+            </li>
             <li class="num">Scénario
               <ol class="scénario">
                 <li class="scénario"><a href="#notreLogiciel"
@@ -241,6 +284,23 @@
             </li>
           </ol>
         </li>
+        <p>
+          Situer le produit dans le contexte des autres produits reliés<br>
+          Si produit indépendant, le mentionner<br> Sinon :<br>
+          Enoncer ici les exigences de ce système par rapport aux
+          fonctions du logiciel<br> Décrire les interfaces entre le
+          système et le logiciel<br> Peut être utile d’inclure un
+          schéma fonctionnel montrant les principales composantes<br>
+          du système et leurs relations, de même que les interfaces
+          externes.<br> ¨ Cette section devrait également indiquer
+          à quelles contraintes doit se plier le logiciel, notamment :<br>
+          ¤ Les interfaces avec le système<br> ¤ Les interfaces
+          avec les utilisateurs<br> ¤ Les interfaces avec le
+          matériel<br> ¤ Les interfaces avec les logiciels<br>
+          ¤ Les interfaces de communication<br> ¤ Les contraintes
+          de mémoire<br> ¤ Les activités<br> ¤ Les exigences
+          d’adaptation aux sites<br>
+        </p>
         <li class="num">Caractéristiques des utilisateurs
           <ol>
             <li class="num">Niveau d’instruction
@@ -304,18 +364,7 @@
 		</form> -->
   <section id="vide"></section>
   <footer></footer>
-  <script type="text/javascript" src="index_fichiers/main.js"></script>
-
-
-
-
-
-  <style type="text/css"></style>
-
-
-
-
-
+  <script src="index_fichiers/main.js"></script>
 
 </body>
 </html>

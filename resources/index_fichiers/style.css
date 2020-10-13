@@ -40,7 +40,7 @@ td {
 	border-color: #000;
 }
 
-li {
+ol > li {
 	list-style-type: decimal;
 	display: block;
 }
@@ -54,12 +54,12 @@ ol.scénario {
 	counter-reset: sitem
 }
 
-li.num:before {
+ol li.num:before {
 	content: counters(item, ".") " : ";
 	counter-increment: item
 }
 
-li.scénario:before {
+ol li.scénario:before {
 	content: 'Scénario-' counters(sitem, ".") " : ";
 	counter-increment: sitem
 }
@@ -83,3 +83,7 @@ ul, ol {
 table:not(:nth-child(5)) {
 	font-size: 10px;
 }
+
+ul li{
+	list-style-type: unset;
+} 
