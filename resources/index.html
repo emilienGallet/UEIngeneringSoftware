@@ -12,7 +12,7 @@
   <h1>Serene Mouv</h1>
   <h2>Document de spécification des exigences</h2>
   <h3>
-    version : <em contenteditable="true">0.1.3</em>
+    version : <em contenteditable="true">0.1.4</em>
   </h3>
   <table>
     <thead>
@@ -59,10 +59,23 @@
           bonne voie</td>
       </tr>
       <tr>
-        <td><br></td>
-        <td><br></td>
-        <td><br></td>
-        <td><br></td>
+        <td>Émilien & Jérémy</td>
+        <td>0.1.3.2</td>
+        <td>13/10/20</td>
+        <td>Suppresion du sénario 2.3 et de ces fils. On ne peux
+          pas récuperer la capacité de la batterie par cette méthode</td>
+      </tr>
+      <tr>
+        <td>Jérémy </td>
+        <td>0.1.4 </td>
+        <td>18/10/20 </td>
+        <td>Ajout de la section 3.1 et des sous section 3.1.1 a 3.1.4 </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tfoot></tfoot>
@@ -186,7 +199,7 @@
               <p>
                 Dans un contexte ou le marché d'un <a href="#VE"
                   contenteditable="false">véhicule électrique</a> est
-                propice à un dévellopement. Des rétissence dans l'achat
+                propice à un dévellopement. Des réticence dans l'achat
                 peuvent apparaitre au sujet de l'autonomie de la voiture
                 électrique.
               </p>
@@ -275,18 +288,6 @@
                     <li class="scénario" contenteditable="true">Notre
                       système doit récupérer les informations essentiel
                       par une application intermédiaire.</li>
-                    <li class="scénario" contenteditable="true">Notre
-                      système doit récupérer les informations essentiel
-                      par reconnaissance d'image.
-                      <ol class="scénario">
-                        <li class="scénario">Reconnaissance d'image
-                          par une caméra externe relier à notre système.
-                        </li>
-                        <li class="scénario">Reconnaissance d'image
-                          par la caméra du téléphone qui continent notre
-                          système.</li>
-                      </ol>
-                    </li>
                   </ol>
                 </li>
 
@@ -347,6 +348,47 @@
           </ol>
         </li>
       </ol>
+    </li>
+    <li class="num"> Exigences spécifiques
+      <ol>
+        <li class="num">Exigences des interfaces externes
+          <ol>
+            <li class="num">La capacité de la batterie
+              <p>
+                C'est le maximun d'autonomie disponible.
+                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
+                Exprimer en KW.
+              </p>
+
+            </li>
+            <li class="num"> L’autonomie restante estimé de la batterie
+              <p>
+                Le temps restant avant que la voiture soit a cours d'energie et ne fonctionne plus.
+                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
+                Exprimer en KW.
+              </p>
+
+            </li>
+            <li class="num"> La consomation selon une certaine durée
+              <p>
+                Fournit la consomation dans un intervalle de temps.
+                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
+                Expimer en KWh.
+              </p>
+            </li>
+            <li class="num"> Puissance instantané
+              <p>
+                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
+                Energie libéré au moment ou l’on appuie sur l’accélérateur exprimer en +Xkw ou -Xkw.
+              </p>
+
+            </li>
+
+          </ol>
+        </li>
+      </ol>
+
+
     </li>
   </ol>
   <h4>Notes</h4>
