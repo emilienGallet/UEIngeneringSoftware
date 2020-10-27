@@ -69,7 +69,13 @@
         <td>Jérémy </td>
         <td>0.1.4 </td>
         <td>18/10/20 </td>
-        <td>Ajout de la section 3.1 et des sous section 3.1.1 a 3.1.4 </td>
+        <td>Ajout de la section 3.1 et des sous sections 3.1.1 a 3.1.4 </td>
+      </tr>
+      <tr>
+        <td>Mélanie</td>
+        <td>0.1.5</td>
+        <td>27/10/20</td>
+        <td>Ajout de 3.2 des sous sections 3.2.1 a 3.2.5</td>
       </tr>
       <tr>
         <td></td>
@@ -387,8 +393,224 @@
           </ol>
         </li>
       </ol>
+      <ol>
+        <li class="num">Exigences fonctionnelles
+          <ol>
+            <p>
+              Le conducteur doit savoir conduire une voiture électrique
+            </p>
+            <li class="num">Impact de la température sur la batterie
+              <ol>
+                <li class="num">Vérification de la validité des intrants
+                  <ol>
+                    <li class="num">Le système doit récupérer et vérifier que *les données de la batterie* soient au bon format
+                      <ol>
+                        <li class="num">le pourcentage de batterie actuel doit être une valeur digitale (entre 0 et 100) 
+                        </li>
+                      </ol>
+                      <ol>
+                        <li class="num"> la température de la batterie doit être une valeur digitale (exprimée en °C) 
+                        </li>
+                      </ol>
+                      <ol>
+                        <li class="num">la température ambiante doit être une valeur digitale (exprimée en °C)
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                  <ol>
+                    <li class="num"> Le système doit récupérer et vérifier que les données récupérées par le capteur de température exterieur soient bien en °C
 
-
+                      <ol>
+                        <li class="num"> la température extérieure doit être une valeur digitale (exprimée en °C)
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+        
+                </li>
+              </ol>
+              <ol>
+                <li class="num">Séquence exacte des activités
+                  <ol>
+                    <li class="num">Le système doit récupérer la date et l’heure du départ du trajet (format jj:MM:aa hh:mm:ss)
+                    </li>
+                  </ol>
+                  <ol>
+                    <li class="num">Le système doit récupérer la date et l’heure de l’arrivée du trajet (format jj:MM:aa hh:mm:ss)
+                    </li>
+                  </ol>
+                  <ol>
+                    <li class="num">Le système doit calculer le temps du trajet (en heure:minutes)
+                    </li>
+                  </ol>
+        
+                </li>
+              </ol>
+              <ol>
+                <li class="num">Réponses aux situations anormales, y compris :
+                  <ol>
+                    <li class="num">Dépassement
+                    </li>
+                  </ol>
+                  <ol>
+                    <li class="num">Installations de télécommunications
+                      <p>
+                        On prendra en valeur par défaut une batterie lithium-ion
+                      </p>
+                      <ol>
+                        <li class="num">Si la température extérieure est trop faible < 10°C
+                          <ol>
+                            <li class="num">Le système doit envoyer une notification avec comme message “attention le temps de recharge va être augmenté” si la voiture est en charge
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Si décharge à "froid"
+                              <ol>
+                                <li class="num">Si la batterie est en dessous de 10%, le système doit demander de la charger rapidement tant que la batterie est chaude
+                                </li>
+                              </ol>
+                              <ol>
+                                <li class="num">Le système doit afficher que la voiture limite automatiquement le système de récupération d’énergie par freinage
+                                </li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                      <ol>
+                        <li class="num">Si la température avoisine les 10°C
+                          <ol>
+                            <li class="num">Le système doit informer qu’une perte de puissance à la décharge va se produire
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Le système doit avertir si la batterie est en dessous de 20%
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Si besoin de recharger, le système doit informer de recharger 1 heure avant le départ pour garder l’énergie
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Si le chauffage est allumé, le système doit vérifier que le chauffage des sièges est activé à la place du chauffage de l’habitacle
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                      
+                      <ol>
+                        <li class="num">Si la température extérieure est trop haute >35°C
+                          <ol>
+                            <li class="num">Le système doit envoyer une notification avec comme message “attention le temps de recharge va être augmenté” si la voiture est en charge
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Le système doit informer que le système de récupération d'énergie est désactivé
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Le soleil fournit de l’énergie qui est gardée (en surplus)
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">La température de la batterie doit être entre 2 bornes données lors de l’achat de la voiture
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                      <ol>
+                        <li class="num"> Si la température de la batterie est supérieure à 50°C
+                          <ol>
+                            <li class="num">Le système doit informer qu’il faut s’arrêter rapidement
+                              <p>
+                                La température de la batterie chauffe rapidement lors de charge à forte puissance et de trajet à vitesse élevée
+                              </p>
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                  <ol>
+                    <li class="num">Traitement des erreurs et récupération
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+              <ol>
+                <li class="num">Effet des paramètres
+        
+        
+                </li>
+              </ol>
+              <ol>
+                <li class="num">Rapports entre extrants et intrants, y compris
+                  <ol>
+                    <li class="num">Séquences intrants/extrants
+                    </li>
+                  </ol>
+                  <ol>
+                    <li class="num">Formules de conversion d’intrant à extrant
+                      <ol>
+                        <li class="num"> Si la température extérieure est inférieure à 10°C
+                          <ol>
+                            <li class="num"> l’autonomie diminue environ de 15%
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num"> perte entre les kWh de réserve et ceux qui pourront être exploités par moniteur électrique
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                      <ol>
+                        <li class="num">Si la température avoisine 10°C
+                          <ol>
+                            <li class="num"> à la charge
+                              <p>20%-30% de kms en moins pour la même charge</p>
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">si voiture garée en extérieur et 0°C dehors, 1 km/h de perte d’autonomie
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Si le chauffage est allumé, autonomie/2 et énergie de batterie diminuée
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                      <ol>
+                        <li class="num">Si la température extérieure est supérieure à 35°C
+                          <ol>
+                            <li class="num"> autonomie -= 15%
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">Si climatisation, 10 à 20% d’autonomie en moins sauf si système de pompe à chaleur réversible
+                            </li>
+                          </ol>
+                          <ol>
+                            <li class="num">batterie vers 30°C, autonomie à 100%
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          
+          <!-- <ol>
+            <li class="num">
+            </li>
+          </ol> -->
+          
+        </li>
+      </ol>
     </li>
   </ol>
   <h4>Notes</h4>
