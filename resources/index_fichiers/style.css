@@ -16,7 +16,7 @@ body {
 	.noPrint, .noPrint * {
 		display: none !important;
 	}
-	img:not(:first-child) {
+	img:not(#logo) {
 		width: 100%;
 	}
 }
