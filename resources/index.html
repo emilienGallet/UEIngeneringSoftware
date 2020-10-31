@@ -59,23 +59,35 @@
           bonne voie</td>
       </tr>
       <tr>
-        <td>Émilien & Jérémy</td>
+        <td>Émilien &amp; Jérémy</td>
         <td>0.1.3.2</td>
         <td>18/10/20</td>
         <td>Suppresion du sénario 2.3 et de ces fils. On ne peux
           pas récuperer la capacité de la batterie par cette méthode</td>
       </tr>
       <tr>
-        <td>Jérémy </td>
-        <td>0.1.4 </td>
-        <td>18/10/20 </td>
-        <td>Ajout de la section 3.1 et des sous section 3.1.1 a 3.1.4 </td>
+        <td>Jérémy</td>
+        <td>0.1.4</td>
+        <td>18/10/20</td>
+        <td>Ajout de la section 3.1 et des sous section 3.1.1 a
+          3.1.4</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Émilien<br></td>
+        <td><br></td>
+        <td>23/10/20<br></td>
+        <td>Modification des scénario en intégrant le fait que il
+          faut spécifier si il faut ou non un système embarqué dans la
+          voiture. Non nécessaire dans les 2 nouveaux scénario crée<br>
+        </td>
+      </tr>
+      <tr>
+        <td>Émilien<br></td>
+        <td><br></td>
+        <td>30/10/20<br></td>
+        <td>Fin avec le schéma fonctionnel, écriture des points
+          2.4-2.11<br>
+        </td>
       </tr>
     </tbody>
     <tfoot></tfoot>
@@ -241,79 +253,435 @@
               <ol class="scénario">
                 <li class="scénario"><a href="#notreLogiciel"
                   contenteditable="false">Notre système</a> doit être
-                  intégré avec <a href="#sysEmbarquer"
+                  intégré et communiquer avec <a href="#sysEmbarquer"
                   contenteditable="false">le système embarqué</a> au
                   sein de(s) <a href="#VE" contenteditable="false">la(les)
-                    voiture(s) électrique(s).</a>
+                    voiture(s) électrique(s).</a> <img
+                  id="SchemaFonctionnelScénario1Global"
+                  alt="Schema Fonctionnel Scénario 1 Global"
+                  src="index_fichiers/SchemaFonctionnelScenario1Global.png">
+                  <img id="SchemaFonctionnelScénario1System"
+                  alt="Schema Fonctionnel Scénario 1 System"
+                  src="index_fichiers/SchemaFonctionnelScenario1System.png">
                   <ol class="scénario">
                     <li class="scénario">Notre système doit être
-                      intégré avec le système embarqué pour <strong>toute
-                        les <a href="#marqueConstruct"
-                        contenteditable="false">marques constructeur</a>
-                    </strong> disposant d’une gamme de voitures électrique.
+                      intégré et communiquer avec le système embarqué
+                      pour <strong>toute les <a
+                        href="#marqueConstruct" contenteditable="false">marques
+                          constructeur</a>
+                    </strong> disposant d’une gamme de voitures électrique
+                      comportant un système embarqué.
                     </li>
                     <li class="scénario">Notre système doit être
-                      intégré avec le système embarqué que <strong>sur
-                        une marque constructeur</strong> avec une gamme de
-                      voiture électrique.
+                      intégré et communiquer avec le système embarqué
+                      que <strong>sur une marque constructeur</strong>
+                      avec une gamme de voiture électrique comportant un
+                      système embarqué.
                     </li>
                     <li class="scénario">Notre système doit être
-                      intégré avec le système embarqué que <strong>sur
-                        un seul <a href="#modeleVoiture"
+                      intégré et communiquer avec le système embarqué
+                      que <strong>sur un seul <a
+                        href="#modeleVoiture" contenteditable="false">modèle
+                          de voiture</a></strong> électrique comportant un système
+                      embarqué.
+
+                    </li>
+                    <li class="scénario">Notre système doit être
+                      intégré et communiquer avec le système embarqué
+                      que <strong>sur un seul <a
+                        href="#modeleVoitureUniquePhase"
                         contenteditable="false">modèle de voiture
-                          électrique.</a>
-                    </strong>
+                          électrique d’une unique phase</a>
+                    </strong> comportant un système embarqué.
                     </li>
                     <li class="scénario">Notre système doit être
-                      intégré avec le système embarqué que <strong>sur
-                        un seul <a href="#modeleVoitureUniquePhase"
-                        contenteditable="false">modèle de voiture
-                          électrique d’une unique phase.</a>
-                    </strong>
-                    </li>
-                    <li class="scénario">Notre système doit être
-                      intégré avec le système embarqué que <strong>sur
-                        une unique voiture électrique.</strong>
+                      intégré et communiquer avec le système embarqué
+                      que <strong>sur une unique voiture
+                        électrique</strong> comportant un système embarqué.
                     </li>
                   </ol></li>
                 <li class="scénario" contenteditable="true">Notre
                   système doit être capable de communiquer avec la(les)
-                  voiture(s) électrique.
+                  voiture(s) électrique sans l’intégrer au système
+                  embarqué.
+
+
                   <ol class="scénario">
+                    <li class="scénario" contenteditable="true"><img
+                      id="SchemaFonctionnelScénario2-1Global"
+                      alt="Schema Fonctionnel Scénario 2,1 Global"
+                      src="index_fichiers/SchemaFonctionnelScenario2-1Global.png">
+                      <img id="SchemaFonctionnelScénario2-1System"
+                      alt="Schema Fonctionnel Scénario 2,1 System"
+                      src="index_fichiers/SchemaFonctionnelScenario2-XSystem.png">
+                      Notre système doit récupérer les informations
+                      essentiel par la <a href="#obd2"
+                      contenteditable="false">prise OBD2</a> et affiche
+                      les infos à l'utilisateur sur le système embarqué.
+                      <ol class="scénario">
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> pour <strong>toute les <a
+                            href="#marqueConstruct"
+                            contenteditable="false">marques
+                              constructeur</a>
+                        </strong> disposant d’une gamme de voitures électrique
+                          comportant un système embarqué.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur une marque
+                            constructeur</strong> avec une gamme de voiture
+                          électrique comportant un système embarqué.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur un seul <a
+                            href="#modeleVoiture"
+                            contenteditable="false">modèle de
+                              voiture électrique</a>
+                        </strong> comportant un système embarqué.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur un seul <a
+                            href="#modeleVoitureUniquePhase"
+                            contenteditable="false">modèle de
+                              voiture électrique d’une unique phase</a></strong>
+                          comportant un système embarqué.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur une unique
+                            voiture électrique</strong> comportant un système
+                          embarqué.
+                        </li>
+
+                      </ol></li>
                     <li class="scénario" contenteditable="true">Notre
                       système doit récupérer les informations essentiel
-                      par la <a href="#obd2" contenteditable="false">prise
-                        OBD2</a>.
+                      par une application intermédiaire qui est
+                      connecter à la prise OBD2 et affiche les infos à
+                      l'utilisateur sur le système embarqué. <img
+                      id="SchemaFonctionnelScénario2-2Global"
+                      alt="Schema Fonctionnel Scénario 2,2 Global"
+                      src="index_fichiers/SchemaFonctionnelScenario2-2Global.png">
+                      <ol class="scénario">
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 pour <strong>toute les
+                            <a href="#marqueConstruct"
+                            contenteditable="false">marques
+                              constructeur</a>
+                        </strong> disposant d’une gamme de voitures électrique
+                          comportant un système embarqué.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur une
+                            marque constructeur</strong> avec une gamme de
+                          voiture électrique comportant un système
+                          embarqué.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur un seul
+                            <a href="#modeleVoiture"
+                            contenteditable="false">modèle de
+                              voiture électrique</a>
+                        </strong><a href="#modeleVoiture" contenteditable="false"></a>
+                          comportant un système embarqué.
+
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur un seul
+                            <a href="#modeleVoitureUniquePhase"
+                            contenteditable="false">modèle de
+                              voiture électrique d’une unique phase</a>
+                        </strong> comportant un système embarqué.
+
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur une
+                            unique voiture électrique</strong> comportant un
+                          système embarqué.
+
+                        </li>
+                      </ol>
                     </li>
                     <li class="scénario" contenteditable="true">Notre
                       système doit récupérer les informations essentiel
-                      par une application intermédiaire.</li>
+                      directement par la <a href="#obd2"
+                      contenteditable="false">prise OBD2</a> et affiche
+                      les infos à l'utilisateur sur l'écran du
+                      téléphone. <img
+                      id="SchemaFonctionnelScénario2-3Global"
+                      alt="Schema Fonctionnel Scénario 2,3 Global"
+                      src="index_fichiers/SchemaFonctionnelScenario2-3Global.png">
+                      <ol class="scénario">
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> pour <strong>toute les <a
+                            href="#marqueConstruct"
+                            contenteditable="false">marques
+                              constructeur</a>
+                        </strong> disposant d’une gamme de voitures électrique.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur une marque
+                            constructeur</strong> avec une gamme de voiture
+                          électrique.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur un seul <a
+                            href="#modeleVoiture"
+                            contenteditable="false">modèle de
+                              voiture électrique</a></strong>.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur un seul <a
+                            href="#modeleVoitureUniquePhase"
+                            contenteditable="false">modèle de
+                              voiture électrique d’une unique phase</a></strong>.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel
+                          directement par la <a contenteditable="false">prise
+                            OBD2</a> que <strong>sur une unique
+                            voiture électrique</strong>.
+                        </li>
+
+                      </ol>
+                    </li>
+                    <li class="scénario" contenteditable="true">Notre
+                      système doit récupérer les informations essentiel
+                      par une application intermédiaire qui est
+                      connecter à la prise OBD2 et affiche les infos à
+                      l'utilisateur sur l'écran du téléphone. <img
+                      id="SchemaFonctionnelScénario2-4Global"
+                      alt="Schema Fonctionnel Scénario 2,4 Global"
+                      src="index_fichiers/SchemaFonctionnelScenario2-4Global.png">
+                      <ol class="scénario">
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 pour <strong>toute les
+                            <a href="#marqueConstruct"
+                            contenteditable="false">marques
+                              constructeur</a>
+                        </strong> disposant d’une gamme de voitures électrique.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur une
+                            marque constructeur</strong> avec une gamme de
+                          voiture électrique.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur un seul
+                            <a href="#modeleVoiture"
+                            contenteditable="false">modèle de
+                              voiture électrique</a>&nbsp;
+                        </strong><a href="#modeleVoiture" contenteditable="false"></a>.
+
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur un seul
+                            <a href="#modeleVoitureUniquePhase"
+                            contenteditable="false">modèle de
+                              voiture électrique d’une unique phase</a>
+                        </strong>.
+                        </li>
+                        <li class="scénario">Notre système doit
+                          récupérer les informations essentiel par une
+                          application intermédiaire qui est connecter à
+                          la prise OBD2 que <strong>sur une
+                            unique voiture électrique</strong> .
+
+                        </li>
+                      </ol>
+                    </li>
                   </ol>
                 </li>
 
               </ol>
             </li>
+            <li class="num" contenteditable="true">Interfaces avec
+              le&nbsp;système
+              <p>La coque logiciel doit être une interface graphique
+                (GUI). Elle peut-être gérer par notre logiciel dans le
+                cadre des scénario 2.X.. Ou bien par le système embarqué
+                présent dans la voiture pour les scénario 1.X.. Voici
+                donc les différentes méthodes auquel notre système a
+                accès en fonction du scénario choisit.</p>
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true"><br></li>
+              </ol>
+
+            </li>
+            <li class="num" contenteditable="true">Interfaces avec
+              les utilisateurs
+              <ol class="num" contenteditable="true">
+                <li class="num" contenteditable="true">Le menu
+                  (menu())
+                  <ol class="methodes" contenteditable="true">
+                    <li class="methodes" contenteditable="true">Le
+                      menu doit afficher et d’accéder par un bouton,
+                      nommé "Allez vers", à la fonctionnalité
+                      "allezVers()" qui permet d'atteindre une
+                      destination.<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">Le
+                      menu doit afficher et d’accéder par un bouton
+                      représentant un écrou,positionner en haut à
+                      droite, aux paramètres de l'application <br>
+                    </li>
+                    <li class="methodes" contenteditable="true">Le
+                      menu doit afficher et d’accéder par un bouton à
+                      l'historique de ces anciens trajets<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">Le
+                      menu doit afficher la porté disponible du véhicule
+                      à l'état actuel à travers une carte. Voici les
+                      possibilité de réalisation (exclusive entre elle)
+                      <ol class="carte" contenteditable="true">
+                        <li class="carte" contenteditable="true">La
+                          porté disponible du véhicule afficher sur la
+                          carte est un cercle d'un diamètre de la plus
+                          petite porté possible a atteindre</li>
+                        <li class="carte" contenteditable="true">La
+                          porté disponible du véhicule afficher sur la
+                          carte est un polygone <br>
+                        </li>
+                        <li class="carte" contenteditable="true">La
+                          porté disponible du véhicule afficher sur la
+                          carte est une succession de chemin colorer en
+                          vert<br>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                <li class="num" contenteditable="true">Destination
+                  (allezVers())<br>
+                <ol class="methodes" contenteditable="true">
+                    <li class="methodes" contenteditable="true">La
+                      page destination doit afficher l’icône d'un
+                      microphone pour activer la saisie par la voix.
+                      (voixDestination())<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">La
+                      page destination doit afficher un champ pour
+                      saisir du texte correspondant à une adresse, situé
+                      dans la partie haute de l'écran.<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">La
+                      page destination doit afficher un bouton
+                      représenté par l'icône "+", situé à coté de
+                      Destination-2, pour rajouter une étape.<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">La
+                      page destination doit afficher une étape juste en
+                      dessous de l'adresse d'arrivée ou de l'étape N
+                      avant l'arrivée.<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">La
+                      page destination doit afficher un bouton
+                      représentant une borne de recharge et un texte "le
+                      plus proche" situé en bas à droite.<br>
+                    </li>
+                    <li class="methodes" contenteditable="true">La
+                      page destination doit afficher et d’accéder par un
+                      bouton représentant un écrou,positionner en haut à
+                      droite, aux paramètres de cette page.<br>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li class="num" contenteditable="true">Interfaces avec
+              le matériel
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true">La page
+                  destination doit afficher l’icône d'un microphone pour
+                  activer la saisie par la voix. (voixDestination())<br>
+                </li>
+              </ol>
+
+            </li>
+            <li class="num" contenteditable="true">Interfaces avec
+              les logiciels
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true">La page
+                  destination doit afficher l’icône d'un microphone pour
+                  activer la saisie par la voix. (voixDestination())<br>
+                </li>
+              </ol>
+            </li>
+            <li class="num" contenteditable="true">Interfaces de
+              communication
+
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true">La page
+                  destination doit afficher l’icône d'un microphone pour
+                  activer la saisie par la voix. (voixDestination())<br>
+                </li>
+              </ol>
+            </li>
+            <li class="num" contenteditable="true">Contraintes de
+              mémoire<br>
+
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true">La page
+                  destination doit afficher l’icône d'un microphone pour
+                  activer la saisie par la voix. (voixDestination())<br>
+                </li>
+              </ol>
+            </li>
+            <li class="num" contenteditable="true">Les activités
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true">La page
+                  destination doit afficher l’icône d'un microphone pour
+                  activer la saisie par la voix. (voixDestination())<br>
+                </li>
+              </ol>
+            </li>
+            <li class="num" contenteditable="true">Les exigences
+              d'adaptation aux sites
+              <ol class="methodes" contenteditable="true">
+                <li class="methodes" contenteditable="true">La page
+                  destination doit afficher l’icône d'un microphone pour
+                  activer la saisie par la voix. (voixDestination())<br>
+                </li>
+              </ol>
+            </li>
           </ol>
         </li>
-        <img id="SchemaFonctionnelScénario1" alt="Logo de ZE-Moov"
-          src="index_fichiers/SchemaFonctionnel.png">
-        <p>
-          Situer le produit dans le contexte des autres produits reliés<br>
-          Si produit indépendant, le mentionner<br> Sinon :<br>
-          Enoncer ici les exigences de ce système par rapport aux
-          fonctions du logiciel<br> Décrire les interfaces entre le
-          système et le logiciel<br> Peut être utile d’inclure un
-          schéma fonctionnel montrant les principales composantes<br>
-          du système et leurs relations, de même que les interfaces
-          externes.<br> ¨ Cette section devrait également indiquer
-          à quelles contraintes doit se plier le logiciel, notamment :<br>
-          ¤ Les interfaces avec le système<br> ¤ Les interfaces
-          avec les utilisateurs<br> ¤ Les interfaces avec le
-          matériel<br> ¤ Les interfaces avec les logiciels<br>
-          ¤ Les interfaces de communication<br> ¤ Les contraintes
-          de mémoire<br> ¤ Les activités<br> ¤ Les exigences
-          d’adaptation aux sites<br>
-        </p>
+
         <li class="num">Caractéristiques des utilisateurs
           <ol>
             <li class="num">Niveau d’instruction
@@ -349,38 +717,33 @@
         </li>
       </ol>
     </li>
-    <li class="num"> Exigences spécifiques
+    <li class="num">Exigences spécifiques
       <ol>
         <li class="num">Exigences des interfaces externes
           <ol>
             <li class="num">La capacité de la batterie
-              <p>
-                C'est le maximun d'autonomie disponible.
-                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
-                Exprimer en KW.
-              </p>
+              <p>C'est le maximun d'autonomie disponible. Obtenu
+                grace a la prise OBD2 ou directement depuis le système
+                embarqué. Exprimer en KW.</p>
 
             </li>
-            <li class="num"> L’autonomie restante estimé de la batterie
-              <p>
-                Le temps restant avant que la voiture soit a cours d'energie et ne fonctionne plus.
-                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
-                Exprimer en KW.
-              </p>
+            <li class="num">L’autonomie restante estimé de la
+              batterie
+              <p>Le temps restant avant que la voiture soit a cours
+                d'energie et ne fonctionne plus. Obtenu grace a la prise
+                OBD2 ou directement depuis le système embarqué. Exprimer
+                en KW.</p>
 
             </li>
-            <li class="num"> La consomation selon une certaine durée
-              <p>
-                Fournit la consomation dans un intervalle de temps.
-                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
-                Expimer en KWh.
-              </p>
+            <li class="num">La consomation selon une certaine durée
+              <p>Fournit la consomation dans un intervalle de temps.
+                Obtenu grace a la prise OBD2 ou directement depuis le
+                système embarqué. Expimer en KWh.</p>
             </li>
-            <li class="num"> Puissance instantané
-              <p>
-                Obtenu grace a la prise OBD2 ou directement depuis le système embarqué.
-                Energie libéré au moment ou l’on appuie sur l’accélérateur exprimer en +Xkw ou -Xkw.
-              </p>
+            <li class="num">Puissance instantané
+              <p>Obtenu grace a la prise OBD2 ou directement depuis
+                le système embarqué. Energie libéré au moment ou l’on
+                appuie sur l’accélérateur exprimer en +Xkw ou -Xkw.</p>
 
             </li>
 
@@ -419,6 +782,16 @@
   <section id="vide"></section>
   <footer></footer>
   <script src="index_fichiers/main.js"></script>
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
